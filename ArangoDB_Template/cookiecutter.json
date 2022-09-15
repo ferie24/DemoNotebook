@@ -2,7 +2,7 @@
   "full_name": "Felix Riemen",
   "email": "f.riemen@outlook.com",
   "github_username": "ferie24",
-  "project_name": "ArangoDBProjectTemplate",
+  "project_name": "DeleteThis",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "project_short_description": "A Template to kickstart your ArangoDB project",
   "pypi_username": "{{ cookiecutter.github_username }}",
@@ -15,8 +15,11 @@
   "use_arangopipe": "y",
   "use_networkx_adapter": "y",
   "use_oasis": "y",
+  "use_sphinx": "y",
   "create_author_file": "y",
   "import_IMDB_Movie_Graph": "n",
+  "create_PyPI_package": "y",
+  "include_notebooks": "y",
   "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"],
   "_new_lines": "\n"
 }

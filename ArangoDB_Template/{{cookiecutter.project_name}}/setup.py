@@ -10,9 +10,18 @@ with open('HISTORY.rst') as history_file:
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-requirements = []
+requirements = [
+{%- if cookiecutter.use_black|lower == 'y' %} 'black>=22.8.0', {{cookiecutter._new_lines}} {%- endif %}
+{%- if cookiecutter.use_pytest|lower == 'y' %} 'pytest>=7.1.3', {{cookiecutter._new_lines}} {%- endif %}
+{%- if cookiecutter.use_pyArango|lower == 'y' %} 'pyArango>=2.0.1', {{cookiecutter._new_lines}} {%- endif %}
+{%- if cookiecutter.use_arango|lower == 'y' %} 'arango>=0.2.1', {{cookiecutter._new_lines}} {%- endif %}
+{%- if cookiecutter.use_python_arango|lower == 'y' %} 'python-arango>=7.4.1', {{cookiecutter._new_lines}} {%- endif %}
+{%- if cookiecutter.use_arangopipe|lower == 'y' %} 'arangopipe>=0.0.70.0.1', {{cookiecutter._new_lines}} {%- endif %}
+{%- if cookiecutter.use_networkx_adapter|lower == 'y' %} 'adbnx-adapter>=4.2.0', {{cookiecutter._new_lines}} {%- endif %}
+]
 
 test_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest>=3',{%- endif %} ]
+
 
 {%- set license_classifiers = {
     'MIT license': 'License :: OSI Approved :: MIT License',

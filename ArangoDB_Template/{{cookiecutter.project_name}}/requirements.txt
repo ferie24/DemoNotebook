@@ -5,3 +5,4 @@
 {%- if cookiecutter.use_python_arango|lower == 'y' %} python-arango>=7.4.1, {{cookiecutter._new_lines}} {%- endif %}
 {%- if cookiecutter.use_arangopipe|lower == 'y' %} arangopipe>=0.0.70.0.1, {{cookiecutter._new_lines}} {%- endif %}
 {%- if cookiecutter.use_networkx_adapter|lower == 'y' %} adbnx-adapter>=4.2.0, {{cookiecutter._new_lines}} {%- endif %}
+{%- if cookiecutter.use_sphinx|lower == 'y' %} sphinx>=5.1.1, {{cookiecutter._new_lines}} {%- endif %}
